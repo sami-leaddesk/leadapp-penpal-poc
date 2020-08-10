@@ -1,5 +1,4 @@
 import { connectToParent } from "penpal";
-import { Domains } from "./Domains";
 
 interface AssistedCallStartParams {
   phoneNumber: string;
@@ -30,6 +29,10 @@ interface LeadAppApi {
 interface ApiCreationParams {
   parentOrigin: string | RegExp;
 }
+
+export const Domains = {
+  default: /^http(s)?:\/\/[\-\w]*\.leaddesk\.(com|ch|eu)$/,
+};
 
 export const LeadAppApi = async (
   params?: ApiCreationParams

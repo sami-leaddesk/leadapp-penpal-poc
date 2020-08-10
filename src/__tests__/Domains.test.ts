@@ -1,4 +1,4 @@
-import { Domains } from "../Domains";
+import { Domains } from "..";
 
 describe("Domains", () => {
   test("defaults match leaddesk domains", () => {

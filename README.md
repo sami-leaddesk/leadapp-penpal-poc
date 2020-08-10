@@ -9,7 +9,7 @@ import { LeadAppApi } from "leadapp-penpal-poc";
 
 LeadAppApi().then((api) => {
   // Request full screen mode
-  api.fullScreenEnable();
+  api.fullscreenEnable();
 });
 ```
 
