@@ -3,27 +3,12 @@ import { connectToParent } from "penpal";
 interface AssistedCallStartParams {
   phoneNumber: string;
 }
-interface LeadAppApi {
-  /* call */
-  callStart: () => void;
-  callHangup: () => void;
-  callTransfer: () => void;
-  callFinalize: () => void;
-  /* contactDialog */
-  contactDialogClose: () => void;
-  /* callRecording */
-  callRecordingContinue: () => void;
-  callRecordingPause: () => void;
-  /* voiceReceipt */
-  voiceReceiptStart: () => void;
-  voiceReceiptStrop: () => void;
+interface LeadAppMethods {
   /* fullscreen */
-  fullscreenEnable: () => void;
-  fullscreenDisable: () => void;
+  fullscreenEnable: () => Promise<void>;
+  fullscreenDisable: () => Promise<void>;
   /* assistedCall */
-  assistedCallStart: (params: AssistedCallStartParams) => void;
-  /* generic */
-  get(name: string): () => string | number | boolean;
+  assistedCallStart: (params: AssistedCallStartParams) => Promise<void>;
 }
 
 interface ApiCreationParams {
@@ -34,9 +19,9 @@ export const Domains = {
   default: /^http(s)?:\/\/[\-\w]*\.leaddesk\.(com|ch|eu)$/,
 };
 
-export const LeadAppApi = async (
+export const LeadAppMethods = async (
   params?: ApiCreationParams
-): Promise<LeadAppApi> => {
+): Promise<LeadAppMethods> => {
   const options = Object.assign(
     {},
     {
@@ -48,5 +33,5 @@ export const LeadAppApi = async (
   );
   const connection = connectToParent(options);
   const api: unknown = await connection.promise;
-  return api as LeadAppApi;
+  return api as LeadAppMethods;
 };

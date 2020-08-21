@@ -15,4 +15,4 @@ LeadAppApi().then((api) => {
 
 ## API documentation
 
-Full documentation of the LeadDesk API can be found from <https://to-be-added-later>
+Full documentation of the LeadDesk API can be found from [here](API.md).
