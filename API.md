@@ -25,6 +25,7 @@ Functions provided by LeadDesk parent for child LeadApps.
     * [.fullscreenEnable()](#LeadAppMethods+fullscreenEnable) ⇒ <code>Promise.&lt;void&gt;</code>
     * [.fullscreenDisable()](#LeadAppMethods+fullscreenDisable) ⇒ <code>Promise.&lt;void&gt;</code>
     * [.assistedCallStart(params)](#LeadAppMethods+assistedCallStart) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.contactModify(params)](#LeadAppMethods+contactModify) ⇒ <code>Promise.&lt;void&gt;</code>
 
 <a name="LeadAppMethods+fullscreenEnable"></a>
 
@@ -51,6 +52,70 @@ Request LeadDesk to make assisted call to given number. This will also open the 
 | --- | --- | --- |
 | params | <code>object</code> |  |
 | params.phoneNumber | <code>string</code> | Phone number to make the assisted call. Number needs to be in E.164 or pure local number format without any extra characters. |
+
+<a name="LeadAppMethods+contactModify"></a>
+
+### leadAppMethods.contactModify(params) ⇒ <code>Promise.&lt;void&gt;</code>
+Request LeadDesk to modify a given contact.
+
+**Kind**: instance method of [<code>LeadAppMethods</code>](#LeadAppMethods)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>object</code> |  |
+| params.first_name | <code>string / null</code> | First name of the contact to be modified
+| params.last_name | <code>string / null</code> | Last name of the contact to be modified
+| params.ssc | <code>string / null</code> | SSC of the contact to be modified
+| params.title | <code>string / null</code> | Title of the contact to be modified
+| params.www | <code>string / null</code> | Website of the contact to be modified
+| params.birth_year | <code>string / null</code> | Id of the contact to be modified
+| params.gender | <code>string / null</code> | Id of the contact to be modified
+| params.address.country | <code>string / null</code> | Country of the contact to be modified
+| params.address.city | <code>string / null</code> | City of the contact to be modified
+| params.address.postal_code | <code>string / null</code> | Postal Code of the contact to be modified
+| params.address.street_address | <code>string / null</code> | Street Address of the contact to be modified
+| params.email | <code>string / null</code> | Email of the contact to be modified
+| params.other_infos[].id | <code>intger</code> | Number of the other info. For example 1, 2, 3, etc it (Other info 1, Other info 2)
+| params.other_infos[].value | <code>string</code> | Value for other field 1
+
+**Example:** 
+```json
+ {
+     "first_name": "<first name>",
+     "last_name": "<last name>",
+     "ssc": "<social security number>",
+     "title": "<title>",
+     "www": "<url>",
+     "birth_year": <year>,
+     "gender": "<gender>",
+     "address": {
+       "country": "<country>",
+       "city": "<city>",
+       "postal_code": "<postal code>",
+       "street_address": "<street address>"
+     },
+     "email": "<email address>",
+     "other_infos": [
+       {
+         "id": 1,
+         "value": "<value for other field 1>"
+       },
+       {
+         "id": 2,
+         "value": "<value for other field 2>"
+       },
+       {
+         "id": 3,
+         "value": "<value for other field 3>"
+       },   
+       // <... other info fields from 4 to 34... >
+       {
+         "id": 35,
+         "value": "<value for other field 35>"
+       }
+     ]
+   }
+```
 
 <a name="LeadAppApi"></a>
 

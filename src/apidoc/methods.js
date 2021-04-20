@@ -27,4 +27,25 @@ class LeadAppMethods {
    * @return {Promise.<void>}
    */
   assistedCallStart(params) {}
+
+  /**
+   * Request LeadDesk to modify contact
+   *
+   * @param {object} params
+   * @param {string} params.first_name
+   * @param {string} params.last_name
+   * @param {string} params.ssc
+   * @param {string} params.title
+   * @param {string} params.www
+   * @param {string} params.birth_year
+   * @param {string} params.gender
+   * @param {string} params.address.country
+   * @param {string} params.address.city
+   * @param {string} params.address.postal_code
+   * @param {string} params.address.street_address
+   * @param {string} params.email
+   * @param {array} params.other_infos
+   * @return {Promise.<void>}
+   */
+  contactModify(params) {}
 }
