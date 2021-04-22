@@ -47,16 +47,16 @@ export const Domains = {
 };
 
 export const LeadAppMethods = async (
-    params?: ApiCreationParams
+  params?: ApiCreationParams
 ): Promise<LeadAppMethods> => {
   const options = Object.assign(
-      {},
-      {
-        parentOrigin: Domains.default,
-        timeout: 3000,
-      },
-      // TODO: strip out unnecessary properties
-      params
+    {},
+    {
+      parentOrigin: Domains.default,
+      timeout: 3000,
+    },
+    // TODO: strip out unnecessary properties
+    params
   );
   const connection = connectToParent(options);
   const api: unknown = await connection.promise;

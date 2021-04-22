@@ -1,6 +1,6 @@
 {
   "name": "leadapp-penpal-poc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Proof-of-concept library for LeadApp API using penpal",
   "homepage": "https://github.com/sami-leaddesk/leadapp-penpal-poc#readme",
   "repository": {
