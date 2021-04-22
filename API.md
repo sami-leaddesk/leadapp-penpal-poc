@@ -56,31 +56,30 @@ Request LeadDesk to make assisted call to given number. This will also open the 
 <a name="LeadAppMethods+contactModify"></a>
 
 ### leadAppMethods.contactModify(params) ⇒ <code>Promise.&lt;void&gt;</code>
-Request LeadDesk to modify a given contact.
+Request LeadDesk to modify contact with the given data
 
 **Kind**: instance method of [<code>LeadAppMethods</code>](#LeadAppMethods)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> |  |
-| params.first_name | <code>string / null</code> | First name of the contact to be modified
-| params.last_name | <code>string / null</code> | Last name of the contact to be modified
-| params.ssc | <code>string / null</code> | SSC of the contact to be modified
-| params.title | <code>string / null</code> | Title of the contact to be modified
-| params.www | <code>string / null</code> | Website of the contact to be modified
-| params.birth_year | <code>string / null</code> | Id of the contact to be modified
-| params.gender | <code>string / null</code> | Id of the contact to be modified
-| params.address.country | <code>string / null</code> | Country of the contact to be modified
-| params.address.city | <code>string / null</code> | City of the contact to be modified
-| params.address.postal_code | <code>string / null</code> | Postal Code of the contact to be modified
-| params.address.street_address | <code>string / null</code> | Street Address of the contact to be modified
-| params.email | <code>string / null</code> | Email of the contact to be modified
-| params.other_infos[].id | <code>intger</code> | Number of the other info. For example 1, 2, 3, etc it (Other info 1, Other info 2)
-| params.other_infos[].value | <code>string</code> | Value for other field 1
+| params.first_name | <code>string</code> | First name of the contact to be modified |
+| params.last_name | <code>string</code> | Last name of the contact to be modified |
+| params.ssc | <code>string</code> | SSC of the contact to be modified |
+| params.title | <code>string</code> | Title of the contact to be modified |
+| params.www | <code>string</code> | Website of the contact to be modified |
+| params.birth_year | <code>string</code> | Birth year of the contact to be modified |
+| params.gender | <code>string</code> | Gender of the contact to be modified |
+| params.address.country | <code>string</code> | Country of the contact to be modified |
+| params.address.city | <code>string</code> | City of the contact to be modified |
+| params.address.postal_code | <code>string</code> | Postal Code of the contact to be modified |
+| params.address.street_address | <code>string</code> | Street Address of the contact to be modified |
+| params.email | <code>string</code> | Email of the contact to be modified |
+| params.other_infos | <code>array</code> | Array of other infos containing objects of 'id' => the number of Other Infos and the 'value' => value of the Other Info |
 
-**Example:** 
-```json
- {
+**Example**  
+```js
+{
      "first_name": "<first name>",
      "last_name": "<last name>",
      "ssc": "<social security number>",
@@ -107,7 +106,7 @@ Request LeadDesk to modify a given contact.
        {
          "id": 3,
          "value": "<value for other field 3>"
-       },   
+       },
        // <... other info fields from 4 to 34... >
        {
          "id": 35,
@@ -116,7 +115,6 @@ Request LeadDesk to modify a given contact.
      ]
    }
 ```
-
 <a name="LeadAppApi"></a>
 
 ## LeadAppApi(params) ⇒ <code>Promise.&lt;ApiMethods&gt;</code>
