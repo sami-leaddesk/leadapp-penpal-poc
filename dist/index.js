@@ -36,12 +36,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LeadAppMethods = exports.Domains = void 0;
+exports.LeadAppApi = exports.Domains = void 0;
 var penpal_1 = require("penpal");
 exports.Domains = {
     default: /^http(s)?:\/\/[\-\w]*\.leaddesk\.(com|ch|eu)$/,
 };
-exports.LeadAppMethods = function (params) { return __awaiter(void 0, void 0, void 0, function () {
+exports.LeadAppApi = function (params) { return __awaiter(void 0, void 0, void 0, function () {
     var options, connection, api;
     return __generator(this, function (_a) {
         switch (_a.label) {

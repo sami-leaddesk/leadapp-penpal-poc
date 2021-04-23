@@ -46,7 +46,7 @@ export const Domains = {
   default: /^http(s)?:\/\/[\-\w]*\.leaddesk\.(com|ch|eu)$/,
 };
 
-export const LeadAppMethods = async (
+export const LeadAppApi = async (
   params?: ApiCreationParams
 ): Promise<LeadAppMethods> => {
   const options = Object.assign(

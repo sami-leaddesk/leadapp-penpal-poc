@@ -35,5 +35,5 @@ interface ApiCreationParams {
 export declare const Domains: {
     default: RegExp;
 };
-export declare const LeadAppMethods: (params?: ApiCreationParams | undefined) => Promise<LeadAppMethods>;
+export declare const LeadAppApi: (params?: ApiCreationParams | undefined) => Promise<LeadAppMethods>;
 export {};
