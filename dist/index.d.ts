@@ -2,6 +2,7 @@ interface AssistedCallStartParams {
     phoneNumber: string;
 }
 interface ContactModifyParams {
+    contact_id: number;
     first_name?: string | null;
     last_name?: string | null;
     ssc?: string | null;

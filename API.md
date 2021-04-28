@@ -63,6 +63,7 @@ Request LeadDesk to modify contact with the given data
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> |  |
+| params.contact_id | <code>string</code> | Id of the contact to be modified. Mandatory parameter |
 | params.first_name | <code>string</code> | First name of the contact to be modified |
 | params.last_name | <code>string</code> | Last name of the contact to be modified |
 | params.ssc | <code>string</code> | SSC of the contact to be modified |
@@ -80,6 +81,7 @@ Request LeadDesk to modify contact with the given data
 **Example**  
 ```js
 {
+     "contact_id": "<contact id>",
      "first_name": "<first name>",
      "last_name": "<last name>",
      "ssc": "<social security number>",

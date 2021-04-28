@@ -32,6 +32,7 @@ class LeadAppMethods {
    * Request LeadDesk to modify contact with the given data
    *
    * @param {object} params
+   * @param {string} params.contact_id Id of the contact to be modified. Mandatory parameter
    * @param {string} params.first_name First name of the contact to be modified
    * @param {string} params.last_name Last name of the contact to be modified
    * @param {string} params.ssc SSC of the contact to be modified
@@ -46,6 +47,7 @@ class LeadAppMethods {
    * @param {string} params.email Email of the contact to be modified
    * @param {array} params.other_infos Array of other infos containing objects of 'id' => the number of Other Infos and the 'value' => value of the Other Info
    * @example {
+     "contact_id": "<contact id>",
      "first_name": "<first name>",
      "last_name": "<last name>",
      "ssc": "<social security number>",
